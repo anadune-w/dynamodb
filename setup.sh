@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAR_URL=https://s3-sa-east-1.amazonaws.com/dynamodb-local-sao-paulo/dynamodb_local_latest.tar.gz
+TAR_URL=https://s3.eu-central-1.amazonaws.com/dynamodb-local-frankfurt/dynamodb_local_latest.tar.gz
 DEPLOY_DIR=/opt/dynamodb
 
 # Make sure the directory exists
@@ -61,6 +61,7 @@ fi
 chown -R dynamodb.dynamodb ${DEPLOY_DIR}
 
 echo "Setting up service..."
+
 # Grab files from github
 wget --progress=dot -qO /etc/systemd/system/dynamodb.service https://raw.githubusercontent.com/dimasmolskiy/dynamodb/main/dynamodb.service
 
