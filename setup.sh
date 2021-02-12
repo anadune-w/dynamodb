@@ -17,7 +17,6 @@ fi
 archive=$(basename ${TAR_URL})
 
 # Download package
-echo "Downloading package.... Don't close this window."
 wget $url -qO ${archive} ${TAR_URL} -q --show-progress
 
 if [ $? -gt 1 ]
